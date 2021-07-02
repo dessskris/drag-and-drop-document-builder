@@ -1,12 +1,10 @@
 import { Droppable } from 'react-beautiful-dnd';
 import cn from 'classnames';
 
-import Task from '../Task/Task';
-
 import styles from './Column.module.scss';
 
-const Column = ({ column, tasks, isDropDisabled }) => (
-  <div className={styles.container}>
+const Column = ({ column, entries, isDropDisabled, className }) => (
+  <div className={cn(styles.container, className)}>
     <h3 className={styles.title}>{column.title}</h3>
     <Droppable
       droppableId={column.id}
@@ -18,7 +16,7 @@ const Column = ({ column, tasks, isDropDisabled }) => (
           {...provided.droppableProps}
           className={cn(styles.taskList, { [styles.draggingOver]: snapshot.isDraggingOver })}
         >
-          {tasks.map((task, index) => <Task key={task.id} task={task} index={index} />)}
+          {entries}
           {provided.placeholder}
         </div>
       )}
