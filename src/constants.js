@@ -1,11 +1,16 @@
+import Title from './components/Title';
+import Author from './components/Author';
+import DateComponent from './components/Date';
+import TextBlock from './components/TextBlock';
+
 export const widgets = {
-  'widget-1': { id: 'widget-1', content: 'Title' },
-  'widget-2': { id: 'widget-2', content: 'Author' },
-  'widget-3': { id: 'widget-3', content: 'Date' },
-  'widget-4': { id: 'widget-4', content: 'Text Block' },
+  'title': { id: 'title', component: <Title />, content: 'Title' },
+  'author': { id: 'author', component: <Author />, content: 'Author' },
+  'date': { id: 'date', component: <DateComponent />, content: 'Date' },
+  'textBlock': { id: 'textBlock', component: <TextBlock />, content: 'Text Block' },
 };
 
-export const widgetsEntries = ['widget-1', 'widget-2', 'widget-3', 'widget-4'];
+export const widgetsEntries = ['title', 'author', 'date', 'textBlock'];
 
 export const initialDocumentEntries = [];
 

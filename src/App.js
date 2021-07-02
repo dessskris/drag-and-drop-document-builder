@@ -62,7 +62,7 @@ const App = () => {
           key={WIDGETS}
           column={droppables[WIDGETS]}
           entries={widgetsEntries.map((entryId, index) =>
-            <Entry key={entryId} id={entryId} entry={widgets[entryId]} index={index} />
+            <Entry key={entryId} id={entryId} content={widgets[entryId].content} index={index} />
           )}
           isDropDisabled={true}
         />
@@ -71,7 +71,7 @@ const App = () => {
           className={styles.document}
           column={droppables[DOCUMENT]}
           entries={documentEntries.map((entry, index) =>
-            <Entry key={entry.id} id={entry.id} entry={widgets[entry.type]} index={index} />
+            <Entry key={entry.id} id={entry.id} withDragHandle content={widgets[entry.type].component} index={index} />
           )}
         />
       </div>
