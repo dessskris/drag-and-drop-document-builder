@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/drag-and-drop-document-builder/static/css/main.cc690d4a.chunk.css",
-    "main.js": "/drag-and-drop-document-builder/static/js/main.850a6b94.chunk.js",
-    "main.js.map": "/drag-and-drop-document-builder/static/js/main.850a6b94.chunk.js.map",
+    "main.js": "/drag-and-drop-document-builder/static/js/main.4a0f7e0d.chunk.js",
+    "main.js.map": "/drag-and-drop-document-builder/static/js/main.4a0f7e0d.chunk.js.map",
     "runtime-main.js": "/drag-and-drop-document-builder/static/js/runtime-main.b73d7dc1.js",
     "runtime-main.js.map": "/drag-and-drop-document-builder/static/js/runtime-main.b73d7dc1.js.map",
     "static/css/2.23c65e8c.chunk.css": "/drag-and-drop-document-builder/static/css/2.23c65e8c.chunk.css",
-    "static/js/2.5772dec5.chunk.js": "/drag-and-drop-document-builder/static/js/2.5772dec5.chunk.js",
-    "static/js/2.5772dec5.chunk.js.map": "/drag-and-drop-document-builder/static/js/2.5772dec5.chunk.js.map",
+    "static/js/2.d5edcbe9.chunk.js": "/drag-and-drop-document-builder/static/js/2.d5edcbe9.chunk.js",
+    "static/js/2.d5edcbe9.chunk.js.map": "/drag-and-drop-document-builder/static/js/2.d5edcbe9.chunk.js.map",
     "index.html": "/drag-and-drop-document-builder/index.html",
     "static/css/2.23c65e8c.chunk.css.map": "/drag-and-drop-document-builder/static/css/2.23c65e8c.chunk.css.map",
     "static/css/main.cc690d4a.chunk.css.map": "/drag-and-drop-document-builder/static/css/main.cc690d4a.chunk.css.map",
-    "static/js/2.5772dec5.chunk.js.LICENSE.txt": "/drag-and-drop-document-builder/static/js/2.5772dec5.chunk.js.LICENSE.txt"
+    "static/js/2.d5edcbe9.chunk.js.LICENSE.txt": "/drag-and-drop-document-builder/static/js/2.d5edcbe9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b73d7dc1.js",
     "static/css/2.23c65e8c.chunk.css",
-    "static/js/2.5772dec5.chunk.js",
+    "static/js/2.d5edcbe9.chunk.js",
     "static/css/main.cc690d4a.chunk.css",
-    "static/js/main.850a6b94.chunk.js"
+    "static/js/main.4a0f7e0d.chunk.js"
   ]
 }
