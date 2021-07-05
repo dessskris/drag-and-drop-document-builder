@@ -62,7 +62,7 @@ const App = () => {
           key={WIDGETS}
           column={droppables[WIDGETS]}
           entries={widgetsEntries.map((entryId, index) =>
-            <Entry key={entryId} id={entryId} content={widgets[entryId].content} index={index} />
+            <Entry key={entryId} id={entryId} content={widgets[entryId].label} index={index} />
           )}
           isDropDisabled={true}
         />
