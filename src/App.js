@@ -51,6 +51,12 @@ const App = () => {
     setDocumentEntries(newDocumentEntries);
   };
 
+  const deleteDocumentEntry = (index) => {
+    const newDocumentEntries = Array.from(documentEntries);
+    newDocumentEntries.splice(index, 1);
+    setDocumentEntries(newDocumentEntries);
+  };
+
   return (
     <DragDropContext
       //onDragStart={onDragStart}
@@ -72,7 +78,14 @@ const App = () => {
           className={styles.document}
           column={droppables[DOCUMENT]}
           entries={documentEntries.map((entry, index) =>
-            <Entry key={entry.id} id={entry.id} withDragHandle content={widgets[entry.type].component} index={index} />
+            <Entry
+              key={entry.id}
+              id={entry.id}
+              withDragHandle
+              content={widgets[entry.type].component}
+              index={index}
+              onDeleteEntry={() => deleteDocumentEntry(index)}
+            />
           )}
         />
       </div>

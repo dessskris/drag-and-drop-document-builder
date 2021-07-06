@@ -9,6 +9,7 @@
     border: 0;
     margin: 0;
     padding: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -22,11 +23,17 @@
   align-items: center;
 }
 
-.dragHandle {
+.utils {
+  display: flex;
+  flex-direction: column;
   padding: 5px;
   padding-right: 12px;
 
   @media print {
     display: none;
   }
+}
+
+.dragHandle {
+  margin-bottom: 2px;
 }

@@ -1,11 +1,11 @@
 import { Draggable } from 'react-beautiful-dnd';
 import cn from 'classnames';
-import { Icon } from '@blueprintjs/core';
+import { Button, Intent } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
 
 import styles from './Entry.module.scss';
 
-const Entry = ({ id, content, index, withDragHandle }) => (
+const Entry = ({ id, content, index, withDragHandle, onDeleteEntry }) => (
   <Draggable
     draggableId={id}
     index={index}
@@ -21,7 +21,21 @@ const Entry = ({ id, content, index, withDragHandle }) => (
         >
           {withDragHandle
             ? <div className={styles.draggable}>
-                <Icon {...provided.dragHandleProps} className={styles.dragHandle} icon={IconNames.ARROWS_VERTICAL} iconSize={12} />
+                <div className={styles.utils}>
+                  <Button
+                    {...provided.dragHandleProps}
+                    className={styles.dragHandle}
+                    icon={IconNames.ARROWS_VERTICAL}
+                    intent={Intent.PRIMARY}
+                    minimal
+                  />
+                  <Button
+                    onClick={onDeleteEntry}
+                    icon={IconNames.TRASH}
+                    intent={Intent.DANGER}
+                    minimal
+                  />
+                </div>
                 {content}
               </div>
             : content
