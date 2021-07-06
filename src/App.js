@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { v4 as uuid } from 'uuid';
+import { Divider } from '@blueprintjs/core';
 import { widgets, widgetsEntries, initialDocumentEntries, droppables } from './constants';
 import styles from './App.module.scss';
 import Column from './components/Column/Column';
@@ -73,6 +74,7 @@ const App = () => {
           )}
           isDropDisabled={true}
         />
+        <Divider className={styles.hideInPrint} />
         <Column
           key={DOCUMENT}
           className={styles.document}
