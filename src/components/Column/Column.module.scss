@@ -9,6 +9,10 @@
 
 .title {
   padding: 3px 10px;
+
+  @media print {
+    display: none;
+  }
 }
 
 .taskList {

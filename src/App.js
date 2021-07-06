@@ -60,6 +60,7 @@ const App = () => {
       <div className={styles.container}>
         <Column
           key={WIDGETS}
+          className={styles.widgets}
           column={droppables[WIDGETS]}
           entries={widgetsEntries.map((entryId, index) =>
             <Entry key={entryId} id={entryId} content={widgets[entryId].label} index={index} />

@@ -4,6 +4,12 @@
   padding: 8px;
   margin-bottom: 8px;
   background-color: white;
+
+  @media print {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .dragging {
@@ -19,4 +25,8 @@
 .dragHandle {
   padding: 5px;
   padding-right: 12px;
+
+  @media print {
+    display: none;
+  }
 }
