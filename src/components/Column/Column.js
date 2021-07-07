@@ -4,9 +4,12 @@ import cn from 'classnames';
 import styles from './Column.module.scss';
 import printStyles from './Column.print.module.scss';
 
-const Column = ({ column, entries, isDropDisabled, className }) => (
+const Column = ({ column, entries, isDropDisabled, className, rightElement }) => (
   <div className={cn(styles.container, className)}>
-    <h3 className={cn(styles.title, printStyles.hidden)}>{column.title}</h3>
+    <div className={cn(styles.header, printStyles.hidden)}>
+      <h3>{column.title}</h3>
+      {rightElement}
+    </div>
     <Droppable
       droppableId={column.id}
       isDropDisabled={isDropDisabled}

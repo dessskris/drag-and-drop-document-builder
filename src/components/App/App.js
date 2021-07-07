@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
+import ReactToPrint from 'react-to-print';
 import cn from 'classnames';
 import { v4 as uuid } from 'uuid';
-import { Divider } from '@blueprintjs/core';
+import { Button, Divider } from '@blueprintjs/core';
 import { widgets, widgetsEntries, initialDocumentEntries, droppables } from '../../constants';
 import Column from '../Column/Column';
 import Entry from '../Entry/Entry';
@@ -14,7 +15,7 @@ const DOCUMENT = 'document';
 
 const App = () => {
   const [documentEntries, setDocumentEntries] = useState(initialDocumentEntries);
-
+  const printRef = useRef();
   /*
   const onDragStart = () => {
     document.body.style.color = 'orange';
@@ -66,7 +67,7 @@ const App = () => {
       //onDragUpdate={onDragUpdate}
       onDragEnd={onDragEnd}
     >
-      <div className={styles.container}>
+      <div ref={printRef} className={styles.container}>
         <Column
           key={WIDGETS}
           className={cn(styles.widgets, printStyles.hidden)}
@@ -81,6 +82,12 @@ const App = () => {
           key={DOCUMENT}
           className={styles.document}
           column={droppables[DOCUMENT]}
+          rightElement={
+            <ReactToPrint
+              trigger={() => <Button text="Save as PDF" />}
+              content={() => printRef.current}
+            />
+          }
           entries={documentEntries.map((entry, index) =>
             <Entry
               key={entry.id}
