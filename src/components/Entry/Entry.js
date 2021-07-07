@@ -4,6 +4,7 @@ import { Button, Intent } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
 
 import styles from './Entry.module.scss';
+import printStyles from './Entry.print.module.scss';
 
 const Entry = ({ id, content, index, withDragHandle, onDeleteEntry }) => (
   <Draggable
@@ -17,11 +18,11 @@ const Entry = ({ id, content, index, withDragHandle, onDeleteEntry }) => (
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...containerDragHandleProps}
-          className={cn(styles.container, { [styles.dragging]: snapshot.isDragging })}
+          className={cn(styles.container, printStyles.container, { [styles.dragging]: snapshot.isDragging })}
         >
           {withDragHandle
             ? <div className={styles.draggable}>
-                <div className={styles.utils}>
+                <div className={cn(styles.utils, printStyles.hidden)}>
                   <Button
                     {...provided.dragHandleProps}
                     className={styles.dragHandle}

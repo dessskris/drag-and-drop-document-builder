@@ -1,7 +1,5 @@
 .container {
   padding: 10px;
-  //border: 1px solid lightgrey;
-  //border-radius: 2px;
   width: 220px;
   display: flex;
   flex-direction: column;
@@ -9,10 +7,6 @@
 
 .title {
   padding: 3px 10px;
-
-  @media print {
-    display: none;
-  }
 }
 
 .taskList {

@@ -2,10 +2,11 @@ import { Droppable } from 'react-beautiful-dnd';
 import cn from 'classnames';
 
 import styles from './Column.module.scss';
+import printStyles from './Column.print.module.scss';
 
 const Column = ({ column, entries, isDropDisabled, className }) => (
   <div className={cn(styles.container, className)}>
-    <h3 className={styles.title}>{column.title}</h3>
+    <h3 className={cn(styles.title, printStyles.hidden)}>{column.title}</h3>
     <Droppable
       droppableId={column.id}
       isDropDisabled={isDropDisabled}

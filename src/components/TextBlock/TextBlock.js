@@ -7,7 +7,6 @@ const TextBlock = () =>
     className={styles.editableText}
     multiline
     minLines={3}
-    maxLines={12}
     placeholder='Insert text here...'
   />;
 

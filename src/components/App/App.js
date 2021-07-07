@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
+import cn from 'classnames';
 import { v4 as uuid } from 'uuid';
 import { Divider } from '@blueprintjs/core';
-import { widgets, widgetsEntries, initialDocumentEntries, droppables } from './constants';
+import { widgets, widgetsEntries, initialDocumentEntries, droppables } from '../../constants';
+import Column from '../Column/Column';
+import Entry from '../Entry/Entry';
 import styles from './App.module.scss';
-import Column from './components/Column/Column';
-import Entry from './components/Entry/Entry';
+import printStyles from './App.print.module.scss';
 
 const WIDGETS = 'widgets';
 const DOCUMENT = 'document';
@@ -67,14 +69,14 @@ const App = () => {
       <div className={styles.container}>
         <Column
           key={WIDGETS}
-          className={styles.widgets}
+          className={cn(styles.widgets, printStyles.hidden)}
           column={droppables[WIDGETS]}
           entries={widgetsEntries.map((entryId, index) =>
             <Entry key={entryId} id={entryId} content={widgets[entryId].label} index={index} />
           )}
           isDropDisabled={true}
         />
-        <Divider className={styles.hideInPrint} />
+        <Divider className={printStyles.hidden} />
         <Column
           key={DOCUMENT}
           className={styles.document}

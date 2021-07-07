@@ -8,15 +8,6 @@
   width: 100%;
 }
 
-.hideInPrint {
-  @media print {
-    display: none;
-  }
-}
-
 .widgets.widgets {
   height: 100vh;
-  @media print {
-    display: none;
-  }
 }
