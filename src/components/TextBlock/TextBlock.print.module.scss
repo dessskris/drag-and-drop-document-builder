@@ -1,0 +1,8 @@
+@media print {
+  .editableText {
+    height: 100% !important;
+    > span:global(.bp3-editable-text-content) {
+      height: 100% !important;
+    }
+  }
+}
